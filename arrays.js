@@ -3,7 +3,7 @@ function deleteDuplicateElements(arr) {
     return Array.from(array)
 }
 
-console.log('1.', deleteDuplicateElements(["1", "5", "3", "5", "3"]))
+console.log('1.', deleteDuplicateElements(["1", "5", "3", "5", "3"]), deleteDuplicateElements(["4", "7", "4", "5", "1"]))
 
 
 function getSum(arr) {
@@ -14,14 +14,14 @@ function getSum(arr) {
     return sumCounter;
 }
 
-console.log('2.', getSum([19, 10, 0, 7]));
+console.log('2.', getSum([13, 1, 55, 21]), getSum([1, 31, 25, 20]));
 
 
 function intersection(arr1, arr2) {
     return arr1.filter(x => arr2.includes(x))
 }
 
-console.log('3.', intersection(['1', '2', '3'], ['1', '3']))
+console.log('3.', intersection(['1', '2', '3'], ['1', '3']), intersection(['4', '5', '6'], ['5', '6']))
 
 
 function binarySearch(elem, arr) {
@@ -40,7 +40,7 @@ function binarySearch(elem, arr) {
     return -1;
 }
 
-console.log('4.', binarySearch(10, [1, 4, 7, 10, 12, 88, 90]));
+console.log('4.', binarySearch(10, [1, 4, 7, 10, 12, 88, 90]), binarySearch(44, [1, 4, 7, 32, 39, 44, 60, 78]));
 
 
 function merge(arr1, arr2) {
@@ -74,4 +74,4 @@ function mergeSort(arr) {
     return merge(mergeSort(arr1), mergeSort(arr2))
 }
 
-console.log('5.', mergeSort([6, 87, 13, 1, 4]));
+console.log('5.', mergeSort([6, 87, 13, 1, 4]), mergeSort([3, 2, 5, 4, 0]));
