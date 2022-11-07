@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&family=Poppins:ital,wght@0,300;0,500;1,200&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <div class="container-login">
+        <div class="wrap">
+            <input class="wrap-login" type="text" placeholder="Login">
+            <div class="wrap-password">
+                <input class="wrap-password-input" type="password" placeholder="Password" id="pass">
+                <div class="password-vision" onClick="showPassword()">
+                    <img id="vision" src="vision.png" alt="Задана ширина и высота" width="16" height="11">
+                </div>
+            </div>
+            <button class="wrap-button" type="submit">ВОЙТИ</button>
+        </div>
+        <script>
+            function showPassword(){
+                let input = document.getElementById("pass");
+                let vision = document.getElementById("vision");
+                let state = input.type;
+
+                if(state === "password"){
+                    input.type = "text";
+                    vision.src = 'notVision.png'
+                }
+                if(state === "text"){
+                    vision.src = 'vision.png'
+                    input.type = "password";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
